@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<style type="text/css">
+    audio {width: 65px; display: block;}
+    table {
+        border-collapse: collapse;
+    }
+    table, td, th {
+        border: 1px solid black;
+    }
+</style>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/></head><html>
+<body>
+<div>
+  <p> 实验介绍</p>
+  <table border="1">
+    <tr>
+      <th>原始说话人</th><th>gpyinf</th></th>
+    </tr>
+    <tr>
+      <th>目标说话人</th><th>ljspeech</th></th>
+    </tr>
+    <tr>
+      <th>数据集</th><th>各自两千句非平行语料，来训练cyclegan</th></th>
+    </tr>
+  </table>
+</div>
+<div>当前配置：帧移-5ms | identityloss-10000 | seg_length-128 | D_4x64</div>
+<div>wavenet：gpyinf+ljspeech各2k句混合训练</div>
+
+<table border="1"><tr>
+<th rowspan="1", colspan="1">ljspeech_original</th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.ljspeech_original/LJ047-0046.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.ljspeech_original/LJ047-0047.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.ljspeech_original/LJ047-0048.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.ljspeech_original/LJ047-0049.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.ljspeech_original/LJ047-0050.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.ljspeech_original/LJ047-0051.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.ljspeech_original/LJ047-0052.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.ljspeech_original/LJ047-0065.wav" controls="controls">Audio Tag not supported.</audio></th>
+
+</tr>
+<tr>
+<th rowspan="1", colspan="1">gpyinf_original</th>
+<th rowspan="1", colspan="1"><audio src="wav/g2l.gpyinf_original/csnt-131120-0001-131120-gpyinf-0001-GPYINF_0000430_0001030_F.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2l.gpyinf_original/csnt-131120-0001-131120-gpyinf-0001-GPYINF_0001058_0001682_F.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2l.gpyinf_original/csnt-131120-0001-131120-gpyinf-0001-GPYINF_0001798_0002322_F.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2l.gpyinf_original/csnt-131120-0001-131120-gpyinf-0001-GPYINF_0002382_0002934_F.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2l.gpyinf_original/csnt-131120-0001-131120-gpyinf-0001-GPYINF_0004250_0004780_F.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2l.gpyinf_original/csnt-131120-0001-131125-gpyinf-0001-GPYINF_0000575_0000994_F.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2l.gpyinf_original/csnt-131120-0001-131125-gpyinf-0001-GPYINF_0001062_0001544_F.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2l.gpyinf_original/csnt-131120-0001-131125-gpyinf-0001-GPYINF_0001664_0002034_F.wav" controls="controls">Audio Tag not supported.</audio></th>
+
+</tr>
+<tr>
+<th rowspan="1", colspan="1">gpyinf2ljspeech_gl</th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.GL.g2lj/csnt-131120-0001-131120-gpyinf-0001-GPYINF_0000430_0001030_F-mel-syn.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.GL.g2lj/csnt-131120-0001-131120-gpyinf-0001-GPYINF_0001058_0001682_F-mel-syn.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.GL.g2lj/csnt-131120-0001-131120-gpyinf-0001-GPYINF_0001798_0002322_F-mel-syn.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.GL.g2lj/csnt-131120-0001-131120-gpyinf-0001-GPYINF_0002382_0002934_F-mel-syn.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.GL.g2lj/csnt-131120-0001-131120-gpyinf-0001-GPYINF_0004250_0004780_F-mel-syn.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.GL.g2lj/csnt-131120-0001-131125-gpyinf-0001-GPYINF_0000575_0000994_F-mel-syn.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.GL.g2lj/csnt-131120-0001-131125-gpyinf-0001-GPYINF_0001062_0001544_F-mel-syn.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.GL.g2lj/csnt-131120-0001-131125-gpyinf-0001-GPYINF_0001664_0002034_F-mel-syn.wav" controls="controls">Audio Tag not supported.</audio></th>
+
+</tr>
+<tr>
+<th rowspan="1", colspan="1">ljspeech2gpyinf_gl</th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.GL.lj2g/LJ047-0046-mel-syn.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.GL.lj2g/LJ047-0047-mel-syn.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.GL.lj2g/LJ047-0048-mel-syn.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.GL.lj2g/LJ047-0049-mel-syn.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.GL.lj2g/LJ047-0050-mel-syn.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.GL.lj2g/LJ047-0051-mel-syn.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.GL.lj2g/LJ047-0052-mel-syn.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.GL.lj2g/LJ047-0053-mel-syn.wav" controls="controls">Audio Tag not supported.</audio></th>
+
+</tr>
+<tr>
+<th rowspan="1", colspan="1">gpyinf2ljspeech_wavenet</th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.wavenet.g2lj/checkpoint_step000650000csnt-131120-0001-131120-gpyinf-0001-GPYINF_0000430_0001030_F-mel.npy.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.wavenet.g2lj/checkpoint_step000650000csnt-131120-0001-131120-gpyinf-0001-GPYINF_0001058_0001682_F-mel.npy.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.wavenet.g2lj/checkpoint_step000650000csnt-131120-0001-131120-gpyinf-0001-GPYINF_0001798_0002322_F-mel.npy.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.wavenet.g2lj/checkpoint_step000650000csnt-131120-0001-131120-gpyinf-0001-GPYINF_0002382_0002934_F-mel.npy.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.wavenet.g2lj/checkpoint_step000650000csnt-131120-0001-131120-gpyinf-0001-GPYINF_0004250_0004780_F-mel.npy.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.wavenet.g2lj/checkpoint_step000650000csnt-131120-0001-131125-gpyinf-0001-GPYINF_0000575_0000994_F-mel.npy.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.wavenet.g2lj/checkpoint_step000650000csnt-131120-0001-131125-gpyinf-0001-GPYINF_0001062_0001544_F-mel.npy.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.wavenet.g2lj/checkpoint_step000650000csnt-131120-0001-131125-gpyinf-0001-GPYINF_0001664_0002034_F-mel.npy.wav" controls="controls">Audio Tag not supported.</audio></th>
+
+</tr>
+<tr>
+<th rowspan="1", colspan="1">ljspeech2gpyinf_wavenet</th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.wavenet.lj2g/checkpoint_step000650000LJ047-0046-mel.npy.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.wavenet.lj2g/checkpoint_step000650000LJ047-0047-mel.npy.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.wavenet.lj2g/checkpoint_step000650000LJ047-0048-mel.npy.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.wavenet.lj2g/checkpoint_step000650000LJ047-0049-mel.npy.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.wavenet.lj2g/checkpoint_step000650000LJ047-0050-mel.npy.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.wavenet.lj2g/checkpoint_step000650000LJ047-0051-mel.npy.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.wavenet.lj2g/checkpoint_step000650000LJ047-0052-mel.npy.wav" controls="controls">Audio Tag not supported.</audio></th>
+<th rowspan="1", colspan="1"><audio src="wav/g2lj.frameshift-5ms_D-4x64_length-128_identity-10k.wavenet.lj2g/checkpoint_step000650000LJ047-0053-mel.npy.wav" controls="controls">Audio Tag not supported.</audio></th>
+
+</tr>
+</table>
+</body>
+</html>
+
